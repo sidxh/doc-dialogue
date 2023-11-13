@@ -4,7 +4,7 @@ Welcome to Docs Dialogue, your all-in-one platform for seamless conversations an
 
 ![Landing Preview](https://i.postimg.cc/Nf885Bg0/image-2023-11-14-02-28-51.png)
 
-## Features
+## Features I'm Trying To Implement
 
 - 🛠️ Complete SaaS Built From Scratch
 
