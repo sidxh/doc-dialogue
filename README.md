@@ -6,29 +6,27 @@ Welcome to Docs Dialogue, your all-in-one platform for seamless conversations an
 
 ## Features
 
-### 🛠️ Complete SaaS Built From Scratch
+-🛠️ Complete SaaS Built From Scratch
 
-### 🎨 Clean, Modern UI Using 'shadcn-ui'
+-🎨 Clean, Modern UI Using 'shadcn-ui'
 
-### 💳 Free & Pro Plan Using Stripe
+-💳 Free & Pro Plan Using Stripe
 
-### 📄 A Beautiful And Highly Functional PDF Viewer
+-📄 A Beautiful And Highly Functional PDF Viewer
 
-### 🔒 Authentication Using Kinde
+-🔒 Authentication Using Kinde
 
-### 🚀 Optimistic UI Updates for a Great UX
+-🚀 Optimistic UI Updates for a Great UX
 
-### ⚡ Infinite Message Loading for Performance
+-⚡ Infinite Message Loading for Performance
 
-### 📤 Intuitive Drag n’ Drop Uploads
+-📤 Intuitive Drag n’ Drop Uploads
 
-### 🔧 Modern Data Fetching Using tRPC & Zod
+-🔧 Modern Data Fetching Using tRPC & Zod
 
-### 🧠 LangChain for Infinite AI Memory
+-🧠 LangChain for Infinite AI Memory
 
-### 🌲 Pinecone as Vector Storage
-
-### 📊 Prisma as ORM
+-🌲 Pinecone as Vector Storage & Prisma as ORM
 
 ## Getting Started
 
