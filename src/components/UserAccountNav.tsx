@@ -24,19 +24,19 @@ interface UserAccountNavProps {
 interface SubscriptionPlan {
   isSubscribed: boolean;
   isCanceled: boolean;
-  stripeCurrentPeriodEnd: null;
-  name: string;
-  slug: string;
-  quota: number;
-  pagesPerPdf: number;
-  price: {
+  stripeCurrentPeriodEnd: Date | null;
+  name?: string; // Marking as optional
+  slug?: string; // Marking as optional
+  quota?: number; // Marking as optional
+  pagesPerPdf?: number; // Marking as optional
+  price?: {
     amount: number;
     priceIds: {
       test: string;
       production: string;
     };
   };
-}
+  }
 
 const UserAccountNav = ({ email, imageUrl, name }: UserAccountNavProps) => {
     const [subscriptionPlan, setSubscriptionPlan] = useState<SubscriptionPlan | null>(null);
@@ -44,7 +44,6 @@ const UserAccountNav = ({ email, imageUrl, name }: UserAccountNavProps) => {
     useEffect(() => {
       const fetchSubscriptionPlan = async () => {
         const plan = await getUserSubscriptionPlan();
-        // @ts-ignore
         setSubscriptionPlan(plan); // Update state here
       };
   
