@@ -8,6 +8,7 @@ import { PineconeStore } from 'langchain/vectorstores/pinecone'
 import { NextRequest } from 'next/server'
 
 import { OpenAIStream, StreamingTextResponse } from 'ai'
+import { Completion } from 'openai/resources'
 
 export const POST = async (req: NextRequest) => {
   // endpoint for asking a question to a pdf file
@@ -115,7 +116,7 @@ export const POST = async (req: NextRequest) => {
     ],
   })
 
-  const stream = OpenAIStream(response, {
+  const stream = OpenAIStream(response as AsyncIterable<Completion>, {
     async onCompletion(completion) {
       await db.message.create({
         data: {
