@@ -39,18 +39,17 @@ interface SubscriptionPlan {
 }
 
 const UserAccountNav = ({ email, imageUrl, name }: UserAccountNavProps) => {
+    const [subscriptionPlan, setSubscriptionPlan] = useState<SubscriptionPlan | null>(null);
   
-const [subscriptionPlan, setSubscriptionPlan] = useState<SubscriptionPlan | null>(null);
-
-useEffect(() => {
-    const fetchSubscriptionPlan = async () => {
-      const plan = await getUserSubscriptionPlan();
-      const [subscriptionPlan, setSubscriptionPlan] = useState<{ isSubscribed: boolean; isCanceled: boolean; stripeCurrentPeriodEnd: null; name: string; slug: string; quota: number; pagesPerPdf: number; price: { amount: number; priceIds: { test: string; production: string; }; }; } | null>(null);
-
-    };
-
-    fetchSubscriptionPlan();
-}, []);
+    useEffect(() => {
+      const fetchSubscriptionPlan = async () => {
+        const plan = await getUserSubscriptionPlan();
+        // @ts-ignore
+        setSubscriptionPlan(plan); // Update state here
+      };
+  
+      fetchSubscriptionPlan();
+    }, []);
 
   return (
     <DropdownMenu>
