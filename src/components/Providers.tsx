@@ -21,8 +21,6 @@ const Providers = ({ children }: PropsWithChildren) => {
     })
   )
 
-  console.log("absoluteUrl output:", absoluteUrl('/your-path'));
-
   return (
     <trpc.Provider
       client={trpcClient}
