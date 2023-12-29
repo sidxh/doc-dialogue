@@ -57,6 +57,7 @@ export const appRouter = router({
       const { userId } = ctx
 
       const billingUrl = absoluteUrl('/dashboard/billing')
+      console.log("absoluteUrl output:", absoluteUrl('/your-path'));
 
       if (!userId)
         throw new TRPCError({ code: 'UNAUTHORIZED' })

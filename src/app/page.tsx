@@ -3,8 +3,10 @@ import Link from "next/link";
 import { ArrowRight } from 'lucide-react';
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
+import { absoluteUrl } from "@/lib/utils";
 
 export default function Home() {
+  console.log("absoluteUrl output:", absoluteUrl('/your-path'));
   return (
     <>
       <MaxWidthWrapper className="mb-12 mt-28 sm-mt-40 flex flex-col items-center justify-center text-center">
@@ -20,7 +22,7 @@ export default function Home() {
             <Link className={buttonVariants({
               size: 'lg',
               className: 'mt-5'
-          })} href='/dashboard'>Get Started <ArrowRight className='ml-2 h-5 w-5' /></Link>
+          })} href='/dashboard' target='_blank'>Get Started <ArrowRight className='ml-2 h-5 w-5' /></Link>
       </MaxWidthWrapper>
       
       {/* value proposition section */}
